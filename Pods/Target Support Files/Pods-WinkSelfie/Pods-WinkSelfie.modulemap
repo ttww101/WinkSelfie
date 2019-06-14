@@ -1,0 +1,6 @@
+framework module Pods_WinkSelfie {
+  umbrella header "Pods-WinkSelfie-umbrella.h"
+
+  export *
+  module * { export * }
+}

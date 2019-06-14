@@ -7,14 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F98CDADF6B77C9B58F8BDE4 /* Pods_WinkSelfie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B8474664ED2124C65A0CCB /* Pods_WinkSelfie.framework */; };
 		94EAD5E522B3802300BBF548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD5E422B3802300BBF548 /* AppDelegate.swift */; };
 		94EAD5E722B3802300BBF548 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD5E622B3802300BBF548 /* ViewController.swift */; };
 		94EAD5EA22B3802300BBF548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EAD5E822B3802300BBF548 /* Main.storyboard */; };
 		94EAD5EC22B3802400BBF548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94EAD5EB22B3802400BBF548 /* Assets.xcassets */; };
 		94EAD5EF22B3802400BBF548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EAD5ED22B3802400BBF548 /* LaunchScreen.storyboard */; };
+		94EAD5F722B380BC00BBF548 /* SelfieCamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD5F622B380BC00BBF548 /* SelfieCamViewController.swift */; };
+		94EAD5FD22B3815100BBF548 /* WebTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD5FA22B3815100BBF548 /* WebTools.swift */; };
+		94EAD60122B3818A00BBF548 /* SelfieKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD60022B3818A00BBF548 /* SelfieKey.swift */; };
+		94EAD60322B381AC00BBF548 /* CameraCaptureOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD60222B381AC00BBF548 /* CameraCaptureOutput.swift */; };
+		94EAD60522B381CA00BBF548 /* LivePhotoCaptureProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD60422B381CA00BBF548 /* LivePhotoCaptureProcessor.swift */; };
+		94EAD60722B381EA00BBF548 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD60622B381EA00BBF548 /* FaceView.swift */; };
+		94EAD60922B3837B00BBF548 /* CoreGraphicsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD60822B3837B00BBF548 /* CoreGraphicsExtensions.swift */; };
+		94EAD60B22B3838600BBF548 /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD60A22B3838600BBF548 /* UIView+CornerRadius.swift */; };
+		94EAD60D22B3839500BBF548 /* UIImage+mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD60C22B3839500BBF548 /* UIImage+mask.swift */; };
+		94EAD60F22B383A200BBF548 /* UIColor+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD60E22B383A200BBF548 /* UIColor+Addition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41B8474664ED2124C65A0CCB /* Pods_WinkSelfie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WinkSelfie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		456E77649D9A512BDAEDC857 /* Pods-WinkSelfie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinkSelfie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WinkSelfie/Pods-WinkSelfie.debug.xcconfig"; sourceTree = "<group>"; };
 		94EAD5E122B3802300BBF548 /* WinkSelfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinkSelfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EAD5E422B3802300BBF548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94EAD5E622B3802300BBF548 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +35,17 @@
 		94EAD5EB22B3802400BBF548 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94EAD5EE22B3802400BBF548 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94EAD5F022B3802400BBF548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94EAD5F622B380BC00BBF548 /* SelfieCamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieCamViewController.swift; sourceTree = "<group>"; };
+		94EAD5FA22B3815100BBF548 /* WebTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebTools.swift; sourceTree = "<group>"; };
+		94EAD60022B3818A00BBF548 /* SelfieKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieKey.swift; sourceTree = "<group>"; };
+		94EAD60222B381AC00BBF548 /* CameraCaptureOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCaptureOutput.swift; sourceTree = "<group>"; };
+		94EAD60422B381CA00BBF548 /* LivePhotoCaptureProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePhotoCaptureProcessor.swift; sourceTree = "<group>"; };
+		94EAD60622B381EA00BBF548 /* FaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		94EAD60822B3837B00BBF548 /* CoreGraphicsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtensions.swift; sourceTree = "<group>"; };
+		94EAD60A22B3838600BBF548 /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		94EAD60C22B3839500BBF548 /* UIImage+mask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+mask.swift"; sourceTree = "<group>"; };
+		94EAD60E22B383A200BBF548 /* UIColor+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Addition.swift"; sourceTree = "<group>"; };
+		A438B487FD5387530CDA24A1 /* Pods-WinkSelfie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinkSelfie.release.xcconfig"; path = "Pods/Target Support Files/Pods-WinkSelfie/Pods-WinkSelfie.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +53,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F98CDADF6B77C9B58F8BDE4 /* Pods_WinkSelfie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CA723EC3B743C46AE0E9EC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41B8474664ED2124C65A0CCB /* Pods_WinkSelfie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		94EAD5D822B3802300BBF548 = {
 			isa = PBXGroup;
 			children = (
 				94EAD5E322B3802300BBF548 /* WinkSelfie */,
 				94EAD5E222B3802300BBF548 /* Products */,
+				AD35768BCDEDEF771BAF952F /* Pods */,
+				3CA723EC3B743C46AE0E9EC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +89,8 @@
 		94EAD5E322B3802300BBF548 /* WinkSelfie */ = {
 			isa = PBXGroup;
 			children = (
+				94EAD5F922B3812F00BBF548 /* Extensions */,
+				94EAD5F822B380C000BBF548 /* Cam */,
 				94EAD5E422B3802300BBF548 /* AppDelegate.swift */,
 				94EAD5E622B3802300BBF548 /* ViewController.swift */,
 				94EAD5E822B3802300BBF548 /* Main.storyboard */,
@@ -64,6 +101,39 @@
 			path = WinkSelfie;
 			sourceTree = "<group>";
 		};
+		94EAD5F822B380C000BBF548 /* Cam */ = {
+			isa = PBXGroup;
+			children = (
+				94EAD5F622B380BC00BBF548 /* SelfieCamViewController.swift */,
+				94EAD60222B381AC00BBF548 /* CameraCaptureOutput.swift */,
+				94EAD60422B381CA00BBF548 /* LivePhotoCaptureProcessor.swift */,
+				94EAD60622B381EA00BBF548 /* FaceView.swift */,
+			);
+			path = Cam;
+			sourceTree = "<group>";
+		};
+		94EAD5F922B3812F00BBF548 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				94EAD5FA22B3815100BBF548 /* WebTools.swift */,
+				94EAD60022B3818A00BBF548 /* SelfieKey.swift */,
+				94EAD60822B3837B00BBF548 /* CoreGraphicsExtensions.swift */,
+				94EAD60A22B3838600BBF548 /* UIView+CornerRadius.swift */,
+				94EAD60C22B3839500BBF548 /* UIImage+mask.swift */,
+				94EAD60E22B383A200BBF548 /* UIColor+Addition.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AD35768BCDEDEF771BAF952F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				456E77649D9A512BDAEDC857 /* Pods-WinkSelfie.debug.xcconfig */,
+				A438B487FD5387530CDA24A1 /* Pods-WinkSelfie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94EAD5F322B3802400BBF548 /* Build configuration list for PBXNativeTarget "WinkSelfie" */;
 			buildPhases = (
+				78E9C50E5A0037A08B6480FB /* [CP] Check Pods Manifest.lock */,
 				94EAD5DD22B3802300BBF548 /* Sources */,
 				94EAD5DE22B3802300BBF548 /* Frameworks */,
 				94EAD5DF22B3802300BBF548 /* Resources */,
+				16F99C5685B6687505FE54A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +202,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16F99C5685B6687505FE54A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WinkSelfie/Pods-WinkSelfie-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AVOSCloud/AVOSCloud.framework",
+				"${BUILT_PRODUCTS_DIR}/AwesomeIntroGuideView/AwesomeIntroGuideView.framework",
+				"${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/DWAnimatedLabel/DWAnimatedLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
+				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
+				"${BUILT_PRODUCTS_DIR}/YPImagePicker/YPImagePicker.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AVOSCloud.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AwesomeIntroGuideView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DWAnimatedLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPImagePicker.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WinkSelfie/Pods-WinkSelfie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78E9C50E5A0037A08B6480FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WinkSelfie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		94EAD5DD22B3802300BBF548 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94EAD60D22B3839500BBF548 /* UIImage+mask.swift in Sources */,
+				94EAD60F22B383A200BBF548 /* UIColor+Addition.swift in Sources */,
+				94EAD5FD22B3815100BBF548 /* WebTools.swift in Sources */,
+				94EAD60322B381AC00BBF548 /* CameraCaptureOutput.swift in Sources */,
 				94EAD5E722B3802300BBF548 /* ViewController.swift in Sources */,
+				94EAD60722B381EA00BBF548 /* FaceView.swift in Sources */,
+				94EAD60122B3818A00BBF548 /* SelfieKey.swift in Sources */,
+				94EAD60522B381CA00BBF548 /* LivePhotoCaptureProcessor.swift in Sources */,
 				94EAD5E522B3802300BBF548 /* AppDelegate.swift in Sources */,
+				94EAD5F722B380BC00BBF548 /* SelfieCamViewController.swift in Sources */,
+				94EAD60922B3837B00BBF548 /* CoreGraphicsExtensions.swift in Sources */,
+				94EAD60B22B3838600BBF548 /* UIView+CornerRadius.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +423,7 @@
 		};
 		94EAD5F422B3802400BBF548 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 456E77649D9A512BDAEDC857 /* Pods-WinkSelfie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +442,7 @@
 		};
 		94EAD5F522B3802400BBF548 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A438B487FD5387530CDA24A1 /* Pods-WinkSelfie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
