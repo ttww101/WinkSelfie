@@ -20,71 +20,130 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEJ-EU-ckP" customClass="FaceView" customModule="WinkSelfie" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQ2-v8-gcy" customClass="CircleMenu" customModule="CircleMenu">
-                                        <rect key="frame" x="184" y="739" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="manualShotButtonDidTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yv1-Oe-4xu"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="jqj-hZ-fW2"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCQ-lh-ltC">
-                                <rect key="frame" x="186" y="437" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fYc-nY-Dhn">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieQ-Ls-S2o">
-                                <rect key="frame" x="362" y="832" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cam"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEQ-GD-Rlj">
+                                <rect key="frame" x="192" y="94" width="30" height="30"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wink_face" translatesAutoresizingMaskIntoConstraints="NO" id="fYc-nY-Dhn">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="PNo-1f-clo"/>
+                                            <constraint firstAttribute="height" constant="30" id="Z23-aK-EqY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCQ-lh-ltC">
+                                        <rect key="frame" x="30" y="0.0" width="0.0" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="zCQ-lh-ltC" secondAttribute="bottom" id="2fG-F6-laI"/>
+                                    <constraint firstItem="fYc-nY-Dhn" firstAttribute="top" secondItem="LEQ-GD-Rlj" secondAttribute="top" id="4lx-rK-4YY"/>
+                                    <constraint firstAttribute="trailing" secondItem="zCQ-lh-ltC" secondAttribute="trailing" id="9PO-C9-OqT"/>
+                                    <constraint firstItem="zCQ-lh-ltC" firstAttribute="leading" secondItem="fYc-nY-Dhn" secondAttribute="trailing" id="DG0-tT-lhx"/>
+                                    <constraint firstItem="zCQ-lh-ltC" firstAttribute="top" secondItem="LEQ-GD-Rlj" secondAttribute="top" id="DZk-9f-pil"/>
+                                    <constraint firstItem="fYc-nY-Dhn" firstAttribute="leading" secondItem="LEQ-GD-Rlj" secondAttribute="leading" id="etF-Wv-cd5"/>
+                                    <constraint firstAttribute="bottom" secondItem="fYc-nY-Dhn" secondAttribute="bottom" id="gAm-qO-Si9"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQ2-v8-gcy" customClass="CircleMenu" customModule="CircleMenu">
+                                <rect key="frame" x="182" y="707" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Wj8-R4-g9N"/>
+                                    <constraint firstAttribute="width" constant="50" id="iau-Z2-n7y"/>
+                                </constraints>
+                                <color key="tintColor" red="0.15686274510000001" green="0.84705882349999995" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="5" minY="8" maxX="11" maxY="8"/>
+                                <state key="normal" image="manual"/>
+                                <state key="selected" title="Auto" image="nil"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="buttonsCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                        <real key="value" value="80"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="showDelay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="startAngle">
+                                        <real key="value" value="270"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="endAngle">
+                                        <real key="value" value="450"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jqj-hZ-fW2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieQ-Ls-S2o">
+                                <rect key="frame" x="350" y="814" width="48" height="48"/>
+                                <state key="normal" image="cam_change"/>
                                 <connections>
                                     <action selector="camChangeButtonDidTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w1v-Rc-WhF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTE-To-cjD">
-                                <rect key="frame" x="20" y="832" width="69" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Collection"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTE-To-cjD">
+                                <rect key="frame" x="16" y="814" width="48" height="48"/>
+                                <inset key="imageEdgeInsets" minX="10" minY="7" maxX="0.0" maxY="3"/>
+                                <state key="normal" image="collection"/>
                                 <connections>
                                     <action selector="collentionButtonDidTouchupInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Mn-mg-QKQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceP-t7-vE6">
-                                <rect key="frame" x="189" y="63" width="37" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Flash"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceP-t7-vE6">
+                                <rect key="frame" x="182" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Qlj-vd-b6f"/>
+                                    <constraint firstAttribute="height" constant="50" id="cRc-vh-LP3"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                                <state key="normal" image="flash_off"/>
+                                <state key="selected" image="flash_on"/>
                                 <connections>
                                     <action selector="flashButtonDidTouchupInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nsU-dF-Gy0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRK-qO-w4E">
-                                <rect key="frame" x="28" y="63" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRK-qO-w4E">
+                                <rect key="frame" x="16" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CcQ-iL-DYh"/>
+                                    <constraint firstAttribute="width" constant="50" id="hXI-Bs-cfh"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Live"/>
                                 <connections>
                                     <action selector="liveButtonDidTouchupInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TWd-os-fkj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owy-iF-PJ0">
-                                <rect key="frame" x="191" y="832" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Shot"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owy-iF-PJ0">
+                                <rect key="frame" x="157" y="762" width="100" height="100"/>
+                                <state key="normal" image="manual_shot"/>
+                                <connections>
+                                    <action selector="manualShotButtonDidTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PsX-XC-0sI"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJ8-sl-hxI">
-                                <rect key="frame" x="355" y="63" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="mode"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJ8-sl-hxI">
+                                <rect key="frame" x="348" y="50" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2ZL-t1-SvZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="v0F-Nt-CEu"/>
+                                </constraints>
+                                <state key="normal" title="Normal"/>
+                                <state key="selected" title="Outline"/>
                                 <connections>
                                     <action selector="modeButtonDidTouchupInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bVk-at-pSd"/>
                                 </connections>
@@ -92,10 +151,26 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="eRK-qO-w4E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1Sb-Zs-oOa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qEJ-EU-ckP" secondAttribute="bottom" id="2tt-s2-90V"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qEJ-EU-ckP" secondAttribute="trailing" id="ArI-TA-79t"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Owy-iF-PJ0" secondAttribute="bottom" id="AtK-4b-qpb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ieQ-Ls-S2o" secondAttribute="bottom" id="DWu-Qy-x1V"/>
+                            <constraint firstItem="mQ2-v8-gcy" firstAttribute="centerX" secondItem="Owy-iF-PJ0" secondAttribute="centerX" id="G6e-mF-BJe"/>
+                            <constraint firstItem="Owy-iF-PJ0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PpK-17-EH2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ieQ-Ls-S2o" secondAttribute="trailing" constant="16" id="SsL-P2-eUU"/>
+                            <constraint firstItem="eRK-qO-w4E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TYR-bl-Gun"/>
+                            <constraint firstItem="wJ8-sl-hxI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="Ten-0U-aco"/>
                             <constraint firstItem="qEJ-EU-ckP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aGB-Ll-3wM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HTE-To-cjD" secondAttribute="bottom" id="aRD-dz-ga0"/>
                             <constraint firstItem="qEJ-EU-ckP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="b3C-8H-jxo"/>
+                            <constraint firstItem="ceP-t7-vE6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cqH-hF-WLI"/>
+                            <constraint firstItem="Owy-iF-PJ0" firstAttribute="top" secondItem="mQ2-v8-gcy" secondAttribute="bottom" constant="5" id="hY2-Dx-XjM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wJ8-sl-hxI" secondAttribute="trailing" constant="16" id="ifx-Au-4Tp"/>
+                            <constraint firstItem="HTE-To-cjD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="iwM-hS-ZBl"/>
+                            <constraint firstItem="LEQ-GD-Rlj" firstAttribute="top" secondItem="ceP-t7-vE6" secondAttribute="bottom" id="kAr-AC-14y"/>
+                            <constraint firstItem="ceP-t7-vE6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tsq-Lt-2TU"/>
+                            <constraint firstItem="LEQ-GD-Rlj" firstAttribute="centerX" secondItem="ceP-t7-vE6" secondAttribute="centerX" id="wpB-jJ-A9m"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -131,4 +206,14 @@
             <point key="canvasLocation" x="762" y="54"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cam_change" width="48" height="48"/>
+        <image name="collection" width="48" height="48"/>
+        <image name="flash_off" width="50" height="50"/>
+        <image name="flash_on" width="50" height="50"/>
+        <image name="manual" width="50" height="50"/>
+        <image name="manual_shot" width="100" height="100"/>
+        <image name="nil" width="16" height="16"/>
+        <image name="wink_face" width="50" height="50"/>
+    </resources>
 </document>

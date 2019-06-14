@@ -587,13 +587,23 @@ extension SelfieCamViewController: AVCaptureVideoDataOutputSampleBufferDelegate 
         let detectorOptions = [CIDetectorAccuracy: CIDetectorAccuracyHigh] as [String : Any]
         let faceDetector:CIDetector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: detectorOptions)!
         
-        let imageOptions: [String : Any] = [CIDetectorImageOrientation:1, CIDetectorSmile: true]
+        let imageOptions: [String : Any] = [CIDetectorImageOrientation:1, CIDetectorSmile: true, CIDetectorEyeBlink: true]
         let features = faceDetector.features(in: ciImage, options: imageOptions)
         
         if (features.count != 0) {
             for faceFeature in features {
                 if let faceFeature = faceFeature as? CIFaceFeature {
-                    self.isSmiling = faceFeature.hasSmile
+                    //left & right are mirrored
+                    if faceFeature.leftEyeClosed == true &&
+                        faceFeature.rightEyeClosed == true {
+                        self.isSmiling = false
+                    } else if faceFeature.leftEyeClosed == true {
+                        self.isSmiling = true
+                    } else if faceFeature.rightEyeClosed == true {
+                        self.isSmiling = true
+                    } else {
+                        self.isSmiling = false
+                    }
                 }
             }
         }
