@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,15 +15,15 @@
             <objects>
                 <viewController storyboardIdentifier="SelfieCamViewController" id="BYZ-38-t0r" customClass="SelfieCamViewController" customModule="WinkSelfie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEJ-EU-ckP" customClass="FaceView" customModule="WinkSelfie" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEQ-GD-Rlj">
-                                <rect key="frame" x="192" y="94" width="30" height="30"/>
+                                <rect key="frame" x="192" y="70" width="30" height="30"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wink_face" translatesAutoresizingMaskIntoConstraints="NO" id="fYc-nY-Dhn">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -53,7 +53,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQ2-v8-gcy" customClass="CircleMenu" customModule="CircleMenu">
-                                <rect key="frame" x="182" y="707" width="50" height="50"/>
+                                <rect key="frame" x="182" y="591" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Wj8-R4-g9N"/>
                                     <constraint firstAttribute="width" constant="50" id="iau-Z2-n7y"/>
@@ -90,14 +90,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieQ-Ls-S2o">
-                                <rect key="frame" x="350" y="814" width="48" height="48"/>
+                                <rect key="frame" x="350" y="668" width="48" height="48"/>
                                 <state key="normal" image="cam_change"/>
                                 <connections>
                                     <action selector="camChangeButtonDidTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w1v-Rc-WhF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTE-To-cjD">
-                                <rect key="frame" x="16" y="814" width="48" height="48"/>
+                                <rect key="frame" x="16" y="668" width="48" height="48"/>
                                 <inset key="imageEdgeInsets" minX="10" minY="7" maxX="0.0" maxY="3"/>
                                 <state key="normal" image="collection"/>
                                 <connections>
@@ -105,7 +105,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceP-t7-vE6">
-                                <rect key="frame" x="182" y="44" width="50" height="50"/>
+                                <rect key="frame" x="182" y="20" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Qlj-vd-b6f"/>
                                     <constraint firstAttribute="height" constant="50" id="cRc-vh-LP3"/>
@@ -118,7 +118,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRK-qO-w4E">
-                                <rect key="frame" x="16" y="44" width="50" height="50"/>
+                                <rect key="frame" x="16" y="20" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="CcQ-iL-DYh"/>
                                     <constraint firstAttribute="width" constant="50" id="hXI-Bs-cfh"/>
@@ -130,14 +130,18 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Owy-iF-PJ0">
-                                <rect key="frame" x="157" y="762" width="100" height="100"/>
+                                <rect key="frame" x="172" y="646" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="EJC-eA-BEo"/>
+                                    <constraint firstAttribute="height" constant="70" id="nx2-Md-3qg"/>
+                                </constraints>
                                 <state key="normal" image="manual_shot"/>
                                 <connections>
                                     <action selector="manualShotButtonDidTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PsX-XC-0sI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJ8-sl-hxI">
-                                <rect key="frame" x="348" y="50" width="50" height="50"/>
+                                <rect key="frame" x="348" y="26" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="2ZL-t1-SvZ"/>
                                     <constraint firstAttribute="height" constant="50" id="v0F-Nt-CEu"/>
@@ -154,15 +158,15 @@
                             <constraint firstItem="eRK-qO-w4E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1Sb-Zs-oOa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qEJ-EU-ckP" secondAttribute="bottom" id="2tt-s2-90V"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qEJ-EU-ckP" secondAttribute="trailing" id="ArI-TA-79t"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Owy-iF-PJ0" secondAttribute="bottom" id="AtK-4b-qpb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ieQ-Ls-S2o" secondAttribute="bottom" id="DWu-Qy-x1V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Owy-iF-PJ0" secondAttribute="bottom" constant="20" id="AtK-4b-qpb"/>
+                            <constraint firstItem="HTE-To-cjD" firstAttribute="bottom" secondItem="Owy-iF-PJ0" secondAttribute="bottom" id="Cmf-DW-TVN"/>
                             <constraint firstItem="mQ2-v8-gcy" firstAttribute="centerX" secondItem="Owy-iF-PJ0" secondAttribute="centerX" id="G6e-mF-BJe"/>
                             <constraint firstItem="Owy-iF-PJ0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PpK-17-EH2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ieQ-Ls-S2o" secondAttribute="trailing" constant="16" id="SsL-P2-eUU"/>
                             <constraint firstItem="eRK-qO-w4E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TYR-bl-Gun"/>
                             <constraint firstItem="wJ8-sl-hxI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="Ten-0U-aco"/>
+                            <constraint firstItem="ieQ-Ls-S2o" firstAttribute="bottom" secondItem="Owy-iF-PJ0" secondAttribute="bottom" id="ZZu-Gs-bpE"/>
                             <constraint firstItem="qEJ-EU-ckP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aGB-Ll-3wM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HTE-To-cjD" secondAttribute="bottom" id="aRD-dz-ga0"/>
                             <constraint firstItem="qEJ-EU-ckP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="b3C-8H-jxo"/>
                             <constraint firstItem="ceP-t7-vE6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cqH-hF-WLI"/>
                             <constraint firstItem="Owy-iF-PJ0" firstAttribute="top" secondItem="mQ2-v8-gcy" secondAttribute="bottom" constant="5" id="hY2-Dx-XjM"/>
@@ -190,21 +194,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="kCm-Ui-9Dp">
-            <objects>
-                <viewController id="UKd-bf-7oj" customClass="ViewController" customModule="WinkSelfie" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WML-f6-CFo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="KEm-nx-M1q"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lss-hq-vff" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="762" y="54"/>
-        </scene>
     </scenes>
     <resources>
         <image name="cam_change" width="48" height="48"/>
@@ -212,7 +201,7 @@
         <image name="flash_off" width="50" height="50"/>
         <image name="flash_on" width="50" height="50"/>
         <image name="manual" width="50" height="50"/>
-        <image name="manual_shot" width="100" height="100"/>
+        <image name="manual_shot" width="80" height="80"/>
         <image name="nil" width="16" height="16"/>
         <image name="wink_face" width="50" height="50"/>
     </resources>
