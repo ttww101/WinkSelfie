@@ -28,7 +28,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
     @IBOutlet var camChangeButton: UIButton!
     @IBOutlet var manualShotButton: UIButton!
     @IBOutlet weak var timeIntervalCircleMenuButton: CircleMenu!
-    @IBOutlet weak var smilingImageView: UIImageView!
+    @IBOutlet weak var winkingImageView: UIImageView!
     @IBOutlet weak var smilingCountDownLabel: UILabel!
     
     //capture session
@@ -45,32 +45,32 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
     let cameraOutput = CameraCaptureOutput()
     let videoOutput = AVCaptureVideoDataOutput()
     
-    //smile
-    var smileImage: UIImage? {
+    //wink
+    var winkImage: UIImage? {
         didSet {
             guard
-                let image = smileImage
+                let image = winkImage
                 else
             { return }
             self.savePhotoAnimation(with: image)
         }
     }
-    var isSmiling: Bool = false {
+    var isWinking: Bool = false {
         didSet {
-            self.configAutoSavingPhoto(with: isSmiling)
-            if isSmiling {
+            self.configAutoSavingPhoto(with: isWinking)
+            if isWinking {
                 DispatchQueue.main.async {
-                    self.smilingImageView.tintColor = UIColor.hexColor(with: "9bd4e4")
+                    self.winkingImageView.tintColor = UIColor.hexColor(with: "9bd4e4")
                 }
             } else {
                 DispatchQueue.main.async {
-                    self.smilingImageView.tintColor = .clear
+                    self.winkingImageView.tintColor = .clear
                 }
             }
         }
     }
     var isAutoSavingPhoto: Bool = false
-    var smileTimeInterval: Int = 66666
+    var winkTimeInterval: Int = 66666
     var timer: DispatchSourceTimer? = nil
     var timerTimeInterval: Int = 66666
     
@@ -126,7 +126,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
-        self.smilingImageView.tintColor = .clear
+        self.winkingImageView.tintColor = .clear
         self.smilingCountDownLabel.text = ""
         
         self.coachMarksView = self.createGuideView()
@@ -219,7 +219,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
                 _ = mask?.leading.equalTo()(self.view)?.offset()(16)
                 _ = mask?.trailing.equalTo()(self.view)?.offset()(-16)
             })
-            startLabel.text = "Start Using Smile Selfie!"
+            startLabel.text = "Start Using Wink Selfie!"
             startLabel.startAnimation(duration: 2, {
                 UIView.animate(withDuration: 1.5, animations: {
                     startLabel.alpha = 0
@@ -244,7 +244,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
                 guideView.isUserInteractionEnabled = false
                 self.dwAnimatedLabel_1.text = "This is a manual/auto button."
                 self.dwAnimatedLabel_1.startAnimation(duration: 3, {
-                    self.dwAnimatedLabel_2.text = "Which decides if Auto capture smile."
+                    self.dwAnimatedLabel_2.text = "Which decides if Auto capture wink face."
                     self.dwAnimatedLabel_2.startAnimation(duration: 3, {
                         guideView.isUserInteractionEnabled = true
                     })
@@ -267,7 +267,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
                 guideView.isUserInteractionEnabled = false
                 self.dwAnimatedLabel_1.text = "U can take live photo."
                 self.dwAnimatedLabel_1.startAnimation(duration: 3, {
-                    self.dwAnimatedLabel_2.text = "Make ur smile lively beauty."
+                    self.dwAnimatedLabel_2.text = "Make ur wink face lively."
                     self.dwAnimatedLabel_2.startAnimation(duration: 3, {
                         guideView.isUserInteractionEnabled = true
                     })
@@ -377,7 +377,7 @@ extension SelfieCamViewController {
         config.usesFrontCamera = false
         config.showsFilters = true
         config.shouldSaveNewPicturesToAlbum = true
-        config.albumName = "Smile Selfie Fliter"
+        config.albumName = "Wink Selfie Fliter"
         config.startOnScreen = YPPickerScreen.library
         config.screens = [.library]
         config.targetImageSize = YPImageSize.original
@@ -556,8 +556,8 @@ extension SelfieCamViewController: AVCaptureVideoDataOutputSampleBufferDelegate 
             print(error.localizedDescription)
         }
         
-        //smile
-        self.detectedSmile(with: sampleBuffer)
+        //detect wink
+        self.detectedWink(with: sampleBuffer)
     }
     
     private func detectedFace(request: VNRequest, error: Error?) {
@@ -567,7 +567,7 @@ extension SelfieCamViewController: AVCaptureVideoDataOutputSampleBufferDelegate 
             let result = results.first
             else {
                 faceView.clear()
-                self.isSmiling = false
+                self.isWinking = false
                 return
         }
         if (!isDrawFaceOutLine) {
@@ -578,7 +578,7 @@ extension SelfieCamViewController: AVCaptureVideoDataOutputSampleBufferDelegate 
         }
     }
     
-    private func detectedSmile(with sampleBuffer: CMSampleBuffer) {
+    private func detectedWink(with sampleBuffer: CMSampleBuffer) {
         
         let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
         let attachments:CFDictionary? = CMCopyDictionaryOfAttachments(allocator: kCFAllocatorDefault, target: sampleBuffer, attachmentMode: kCMAttachmentMode_ShouldPropagate)
@@ -587,7 +587,7 @@ extension SelfieCamViewController: AVCaptureVideoDataOutputSampleBufferDelegate 
         let detectorOptions = [CIDetectorAccuracy: CIDetectorAccuracyHigh] as [String : Any]
         let faceDetector:CIDetector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: detectorOptions)!
         
-        let imageOptions: [String : Any] = [CIDetectorImageOrientation:1, CIDetectorSmile: true, CIDetectorEyeBlink: true]
+        let imageOptions: [String : Any] = [CIDetectorImageOrientation:1,  CIDetectorEyeBlink: true]
         let features = faceDetector.features(in: ciImage, options: imageOptions)
         
         if (features.count != 0) {
@@ -596,13 +596,13 @@ extension SelfieCamViewController: AVCaptureVideoDataOutputSampleBufferDelegate 
                     //left & right are mirrored
                     if faceFeature.leftEyeClosed == true &&
                         faceFeature.rightEyeClosed == true {
-                        self.isSmiling = false
+                        self.isWinking = false
                     } else if faceFeature.leftEyeClosed == true {
-                        self.isSmiling = true
+                        self.isWinking = true
                     } else if faceFeature.rightEyeClosed == true {
-                        self.isSmiling = true
+                        self.isWinking = true
                     } else {
-                        self.isSmiling = false
+                        self.isWinking = false
                     }
                 }
             }
@@ -709,7 +709,7 @@ extension SelfieCamViewController {
     
     private func configAutoSavingPhoto(with isSmiling: Bool) {
         if !isAuto || !isSmiling {
-            self.cancelSmileTimer()
+            self.cancelWinkTimer()
             return
         }
         
@@ -720,7 +720,7 @@ extension SelfieCamViewController {
                 
                 self.isAutoSavingPhoto = true
                 
-                self.timerTimeInterval = self.smileTimeInterval
+                self.timerTimeInterval = self.winkTimeInterval
                 
                 self.timer = DispatchSource.makeTimerSource()
                 
@@ -745,16 +745,16 @@ extension SelfieCamViewController {
             self.timerTimeInterval -= 1
         } else if self.timerTimeInterval == 0 {
             //save photo
-            if !self.isSmiling || !self.isAuto {
+            if !self.isWinking || !self.isAuto {
                 self.isAutoSavingPhoto = false
                 return
             }
             self.saveToCamera()
-            self.cancelSmileTimer()
+            self.cancelWinkTimer()
         }
     }
     
-    private func cancelSmileTimer() {
+    private func cancelWinkTimer() {
         self.isAutoSavingPhoto = false
         if let timer = self.timer {
             timer.cancel()
@@ -762,14 +762,14 @@ extension SelfieCamViewController {
         }
         DispatchQueue.main.async {
             self.smilingCountDownLabel.text = ""
-            self.smilingImageView.tintColor = .clear
+            self.winkingImageView.tintColor = .clear
         }
     }
     
     private func saveToCamera() {
         DispatchQueue.main.async {
             self.cameraOutput.captureCompletion = { (image) in
-                self.smileImage = image
+                self.winkImage = image
                 if (!self.cameraOutput.cameraOutput.isLivePhotoCaptureEnabled) {
                     UIImageWriteToSavedPhotosAlbum(image!, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
                 }
@@ -819,7 +819,7 @@ extension SelfieCamViewController {
     }
     
     func circleMenu(_: CircleMenu, buttonDidSelected _: UIButton, atIndex: Int) {
-        self.smileTimeInterval = self.items[atIndex].countDown
+        self.winkTimeInterval = self.items[atIndex].countDown
     }
 }
 
