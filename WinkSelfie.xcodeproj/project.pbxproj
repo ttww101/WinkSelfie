@@ -68,6 +68,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		945B334A22B77E7F00FD51EB /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		94EAD5D822B3802300BBF548 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +96,7 @@
 		94EAD5E322B3802300BBF548 /* WinkSelfie */ = {
 			isa = PBXGroup;
 			children = (
+				945B334A22B77E7F00FD51EB /* New Group */,
 				94EAD5F922B3812F00BBF548 /* Extensions */,
 				94EAD5F822B380C000BBF548 /* Cam */,
 				94EAD5E422B3802300BBF548 /* AppDelegate.swift */,

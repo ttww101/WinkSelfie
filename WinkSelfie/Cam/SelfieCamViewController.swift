@@ -60,7 +60,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
             self.configAutoSavingPhoto(with: isSmiling)
             if isSmiling {
                 DispatchQueue.main.async {
-                    self.smilingImageView.tintColor = UIColor(red: 255/255, green: 126/255, blue: 121/255, alpha: 1.0)
+                    self.smilingImageView.tintColor = UIColor.hexColor(with: "9bd4e4")
                 }
             } else {
                 DispatchQueue.main.async {
@@ -136,7 +136,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
         self.view.addSubview(self.coachMarksView)
         
         //first guide label
-        self.firstGuideLabel.textColor = .hexColor(with: "28D8B8")
+        self.firstGuideLabel.textColor = .hexColor(with: "9bd4e4")
         self.firstGuideLabel.textAlignment = .center
         self.firstGuideLabel.animationType = .typewriter
         self.firstGuideLabel.placeHolderColor = .blue
@@ -207,7 +207,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
         guideView.willCompletionBlock = { guideView in
             self.firstGuideLabel.removeFromSuperview()
             let startLabel = DWAnimatedLabel(frame: CGRect(x: 20, y: 44, width: UIScreen.main.bounds.size.width, height: 150))
-            startLabel.textColor = .hexColor(with: "F1C40F")
+            startLabel.textColor = .hexColor(with: "9bd4e4")
             startLabel.textAlignment = .center
             startLabel.animationType = .typewriter
             startLabel.placeHolderColor = .blue
@@ -360,7 +360,7 @@ extension SelfieCamViewController {
         UIView.animate(withDuration: 1, delay: 0, options: .curveEaseOut, animations: {
             completionImageView.layer.cornerRadius = 5
             completionImageView.layer.masksToBounds = true
-            completionImageView.layer.borderColor = UIColor.hexColor(with: "28D8B8").cgColor
+            completionImageView.layer.borderColor = UIColor.hexColor(with: "98CCFD").cgColor
             completionImageView.frame = CGRect.zero
             //                completionImageView.center = self.collectionButton.center
             completionImageView.frame = self.collectionButton.frame
@@ -385,8 +385,8 @@ extension SelfieCamViewController {
         config.hidesStatusBar = true
         config.hidesBottomBar = true
         config.preferredStatusBarStyle = UIStatusBarStyle.default
-        config.bottomMenuItemSelectedColour = UIColor.hexColor(with: "28D8B8")
-        config.bottomMenuItemUnSelectedColour = UIColor.hexColor(with: "F1C40F")
+        config.bottomMenuItemSelectedColour = UIColor.hexColor(with: "3498DB")
+        config.bottomMenuItemUnSelectedColour = UIColor.hexColor(with: "ECF0F1")
         
         config.library.options = nil
         config.library.onlySquare = false
@@ -736,7 +736,7 @@ extension SelfieCamViewController {
     }
     
     @objc func updateCounter() {
-        let displayText = "\(self.timerTimeInterval/1)"
+        let displayText = " \(self.timerTimeInterval/1)"
         DispatchQueue.main.async {
             self.smilingCountDownLabel.text = displayText
         }
