@@ -15,6 +15,7 @@
 		949E8AB622B8BF3F0058CBA2 /* CameraCaptureOutput+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E8AAF22B8BF3F0058CBA2 /* CameraCaptureOutput+Extension.swift */; };
 		949E8AB722B8BF3F0058CBA2 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E8AB022B8BF3F0058CBA2 /* ViewController+Extension.swift */; };
 		949E8AB822B8BF3F0058CBA2 /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E8AB122B8BF3F0058CBA2 /* AppDelegate+Extension.swift */; };
+		949E8ABA22B8C6B00058CBA2 /* FlashState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E8AB922B8C6B00058CBA2 /* FlashState.swift */; };
 		94EAD5E522B3802300BBF548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD5E422B3802300BBF548 /* AppDelegate.swift */; };
 		94EAD5E722B3802300BBF548 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD5E622B3802300BBF548 /* ViewController.swift */; };
 		94EAD5EA22B3802300BBF548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EAD5E822B3802300BBF548 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		949E8AAF22B8BF3F0058CBA2 /* CameraCaptureOutput+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CameraCaptureOutput+Extension.swift"; sourceTree = "<group>"; };
 		949E8AB022B8BF3F0058CBA2 /* ViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		949E8AB122B8BF3F0058CBA2 /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
+		949E8AB922B8C6B00058CBA2 /* FlashState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashState.swift; sourceTree = "<group>"; };
 		94EAD5E122B3802300BBF548 /* WinkSelfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinkSelfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EAD5E422B3802300BBF548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94EAD5E622B3802300BBF548 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				94EAD60222B381AC00BBF548 /* CameraCaptureOutput.swift */,
 				94EAD60422B381CA00BBF548 /* LivePhotoCaptureProcessor.swift */,
 				94EAD60622B381EA00BBF548 /* FaceView.swift */,
+				949E8AB922B8C6B00058CBA2 /* FlashState.swift */,
 			);
 			path = Cam;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				94EAD60F22B383A200BBF548 /* UIColor+Addition.swift in Sources */,
 				94EAD5FD22B3815100BBF548 /* WebTools.swift in Sources */,
 				949E8AB522B8BF3F0058CBA2 /* FaceView+Extension.swift in Sources */,
+				949E8ABA22B8C6B00058CBA2 /* FlashState.swift in Sources */,
 				949E8AB822B8BF3F0058CBA2 /* AppDelegate+Extension.swift in Sources */,
 				94EAD60322B381AC00BBF548 /* CameraCaptureOutput.swift in Sources */,
 				94EAD5E722B3802300BBF548 /* ViewController.swift in Sources */,
