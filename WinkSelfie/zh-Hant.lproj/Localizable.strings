@@ -6,7 +6,7 @@
   Copyright © 2019 amG. All rights reserved.
 */
 
-"welcome" = "歡迎使用 Wink Selfie!";
+"selfie_guide" = "Wink Selfie 導覽";
 "manual/auto_1" = "這是手動/自動按鈕，";
 "manual/auto_2" = "用來設定手動/自動拍照模式";
 "flash_light" = "此按鈕用來控制閃光燈";
@@ -17,4 +17,5 @@
 "camera_change_1" = "更改您的鏡頭方向，";
 "camera_change_2" = "如果您需要";
 "manual_shot" = "您也可以自己使用手動拍照";
-"selfie_guide" = "Wink Selfie 導覽";
+"welcome" = "歡迎使用 Wink Selfie!";
+"skip_button_text" = "結束導覽";

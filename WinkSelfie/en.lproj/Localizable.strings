@@ -6,7 +6,7 @@
   Copyright © 2019 amG. All rights reserved.
 */
 
-"welcome" = "Welcome to Wink Selfie!";
+"selfie_guide" = "Start Using Wink Selfie!";
 "manual/auto_1" = "This is a manual/auto button.";
 "manual/auto_2" = "Which detect & capture if your wink!";
 "flash_light" = "Control Flash Light.";
@@ -17,4 +17,5 @@
 "camera_change_1" = "Change ur camera.";
 "camera_change_2" = "If u need.";
 "manual_shot" = "U can also take a photo by ur own.";
-"selfie_guide" = "Start Using Wink Selfie!";
+"welcome" = "Welcome to Wink Selfie!";
+"skip_button_text" = "Finish Guide";

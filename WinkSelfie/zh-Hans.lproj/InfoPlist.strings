@@ -5,6 +5,7 @@
  Created by Wu on 2019/6/18.
  Copyright © 2019 amG. All rights reserved.
  */
+
 "CFBundleDisplayName" = "眨眼自拍";
 "CFBundleName" = "眨眼自拍";
 "NSCameraUsageDescription" = "让眨眼自拍取得您的相机开始体验";

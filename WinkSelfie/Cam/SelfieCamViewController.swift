@@ -174,6 +174,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
     
     private func displayCoachView() {
         self.view.addSubview(self.coachMarksView)
+        self.coachMarksView.btnSkipCoach.setTitle(NSLocalizedString("skip_button_text", comment: ""), for: .normal)
         
         //first guide label
         self.firstGuideLabel.textColor = .hexColor(with: "9bd4e4")
