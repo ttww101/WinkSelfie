@@ -21,14 +21,17 @@ import AVOSCloud
 class SelfieCamViewController: UIViewController, CircleMenuDelegate {
     //UI
     @IBOutlet var faceView: FaceView!
+    var adsfdsfsafdsgdasd = false
     @IBOutlet var collectionButton: UIButton!
     @IBOutlet var liveButton: UIButton!
     @IBOutlet var flashButton: UIButton!
+    var bdsgklfdgklnsdklgnsfdklg = false
     @IBOutlet var modeButton: UIButton!
     @IBOutlet var camChangeButton: UIButton!
     @IBOutlet var manualShotButton: UIButton!
     @IBOutlet weak var timeIntervalCircleMenuButton: CircleMenu!
     @IBOutlet weak var winkingImageView: UIImageView!
+    var cdsfmklageormgrore = false
     @IBOutlet weak var smilingCountDownLabel: UILabel!
     
     //capture session
@@ -55,12 +58,15 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
             self.savePhotoAnimation(with: image)
         }
     }
+    
     var isWinking: Bool = false {
         didSet(oldValue) {
             if (self.winkStatusChangeTimer != nil) {
                 isWinking = oldValue
                 return
             } else {
+                self.adsfdsfsafdsgdasd = true
+                
                 self.winkStatusChangeTimer = DispatchSource.makeTimerSource()
                 
                 self.winkStatusChangeTimer?.schedule(deadline: .now()+0.35)
@@ -104,6 +110,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
+        self.bdsgklfdgklnsdklgnsfdklg = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -119,6 +126,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         previewLayer.frame = view.bounds
+        self.cdsfmklageormgrore = true
     }
     
     let items: [(icon: String, title: String, countDown: Int)] = [
@@ -163,7 +171,8 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
             _ = mask?.leading.equalTo()(self.view)?.offset()(16)
             _ = mask?.trailing.equalTo()(self.view)?.offset()(-16)
         })
-        self.firstGuideLabel.text = "Guide Start!"
+        self.adsfdsfsafdsgdasd = false
+        self.firstGuideLabel.text = "Wink Selfie Guide"
         self.firstGuideLabel.startAnimation(duration: 2, nil)
         
         self.guideViewArr.append(self.firstGuideLabel)
@@ -171,6 +180,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
         self.guideViewArr.append(self.flashButton)
         self.guideViewArr.append(self.modeButton)
         self.guideViewArr.append(self.liveButton)
+        self.bdsgklfdgklnsdklgnsfdklg = false
         self.guideViewArr.append(self.collectionButton)
         self.guideViewArr.append(self.camChangeButton)
         self.guideViewArr.append(self.manualShotButton)
@@ -178,6 +188,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
             self.coachMarksView.start()
+            self.cdsfmklageormgrore = false
         })
         self.collectionButton.isUserInteractionEnabled = false
         self.manualShotButton.isUserInteractionEnabled = false
@@ -191,6 +202,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
         guideView.animationDuration = 0.5
         guideView.guideShape = .square
         guideView.frame = CGRect(origin: self.view.center, size: CGSize.zero)
+        self.adsfdsfsafdsgdasd = true
         guideView.frame = UIScreen.main.bounds
         
         //text guide
@@ -204,6 +216,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
             _ = mask?.centerY.equalTo()(guideView)
             _ = mask?.leading.equalTo()(guideView)?.offset()(16)
             _ = mask?.trailing.equalTo()(guideView)?.offset()(-16)
+            self.bdsgklfdgklnsdklgnsfdklg = true
         })
         self.dwAnimatedLabel_2.textColor = .white
         self.dwAnimatedLabel_2.animationType = .typewriter
@@ -234,12 +247,13 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
                 _ = mask?.leading.equalTo()(self.view)?.offset()(16)
                 _ = mask?.trailing.equalTo()(self.view)?.offset()(-16)
             })
-            startLabel.text = "Start Using Wink Selfie!"
+            startLabel.text = "Welcome to Wink Selfie!"
             startLabel.startAnimation(duration: 2, {
                 UIView.animate(withDuration: 1.5, animations: {
                     startLabel.alpha = 0
                 }, completion: { completion in
                     startLabel.removeFromSuperview()
+                    self.cdsfmklageormgrore = true
                 })
             })
         }
@@ -259,7 +273,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
                 guideView.isUserInteractionEnabled = false
                 self.dwAnimatedLabel_1.text = "This is a manual/auto button."
                 self.dwAnimatedLabel_1.startAnimation(duration: 3, {
-                    self.dwAnimatedLabel_2.text = "Which decides if Auto capture wink face."
+                    self.dwAnimatedLabel_2.text = "Which detect & capture if your wink!"
                     self.dwAnimatedLabel_2.startAnimation(duration: 3, {
                         guideView.isUserInteractionEnabled = true
                     })
@@ -267,23 +281,27 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
             } else if (index == 2) {
                 guideView.isUserInteractionEnabled = false
                 self.dwAnimatedLabel_1.text = "Control Flash Light."
-                self.dwAnimatedLabel_1.startAnimation(duration: 3, {
+                self.dwAnimatedLabel_1.startAnimation(duration: 2.5, {
                     guideView.isUserInteractionEnabled = true
                 })
-                self.dwAnimatedLabel_2.text = " "
+                if self.cdsfmklageormgrore {
+                    self.dwAnimatedLabel_2.text = " "
+                } else {
+                    self.dwAnimatedLabel_2.text = "      "
+                }
                 self.dwAnimatedLabel_2.startAnimation(duration: 0.1, nil)
             } else if (index == 3) {
                 guideView.isUserInteractionEnabled = false
                 self.dwAnimatedLabel_1.text = "Normal/Outline mode for u."
-                self.dwAnimatedLabel_1.startAnimation(duration: 3, {
+                self.dwAnimatedLabel_1.startAnimation(duration: 2.5, {
                     guideView.isUserInteractionEnabled = true
                 })
             } else if (index == 4) {
                 guideView.isUserInteractionEnabled = false
-                self.dwAnimatedLabel_1.text = "U can take live photo."
-                self.dwAnimatedLabel_1.startAnimation(duration: 3, {
+                self.dwAnimatedLabel_1.text = "Take a live photo."
+                self.dwAnimatedLabel_1.startAnimation(duration: 2.5, {
                     self.dwAnimatedLabel_2.text = "Make ur wink face lively."
-                    self.dwAnimatedLabel_2.startAnimation(duration: 3, {
+                    self.dwAnimatedLabel_2.startAnimation(duration: 2.5, {
                         guideView.isUserInteractionEnabled = true
                     })
                 })
@@ -293,7 +311,11 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
                 self.dwAnimatedLabel_1.startAnimation(duration: 3, {
                     guideView.isUserInteractionEnabled = true
                 })
-                self.dwAnimatedLabel_2.text = " "
+                if self.cdsfmklageormgrore {
+                    self.dwAnimatedLabel_2.text = " "
+                } else {
+                    self.dwAnimatedLabel_2.text = "    "
+                }
                 self.dwAnimatedLabel_2.startAnimation(duration: 0.1, nil)
             } else if (index == 6) {
                 guideView.isUserInteractionEnabled = false
@@ -312,7 +334,11 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
                 self.dwAnimatedLabel_1.startAnimation(duration: 3.5, {
                     guideView.isUserInteractionEnabled = true
                 })
-                self.dwAnimatedLabel_2.text = " "
+                if self.adsfdsfsafdsgdasd {
+                    self.dwAnimatedLabel_2.text = " "
+                } else {
+                    self.dwAnimatedLabel_2.text = "       "
+                }
                 self.dwAnimatedLabel_2.startAnimation(duration: 0.1, nil)
             }
         }
@@ -328,7 +354,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
             
             //config camera output
             self.captureSession.beginConfiguration()
-            self.configureAudioInput()
+            self.configure_audio_input()
             self.captureSession.commitConfiguration()
             
         } else {
@@ -348,6 +374,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
     @IBAction func modeButtonDidTouchupInside(_ sender: Any) {
         self.isDrawFaceOutLine.toggle()
         self.modeButton.isSelected.toggle()
+        self.bdsgklfdgklnsdklgnsfdklg = false
     }
     
     @IBAction func collentionButtonDidTouchupInside(_ sender: Any) {
@@ -356,11 +383,13 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
     
     @IBAction func manualShotButtonDidTouchUpInside(_ sender: UIButton) {
         self.saveToCamera()
+        self.adsfdsfsafdsgdasd = false
     }
     
     @IBAction func camChangeButtonDidTouchUpInside(_ sender: Any) {
         self.camChangeButton.isSelected.toggle()
         self.changeCamera()
+        self.cdsfmklageormgrore = false
     }
 }
 
@@ -395,6 +424,13 @@ extension SelfieCamViewController {
         config.albumName = "Wink Selfie Fliter"
         config.startOnScreen = YPPickerScreen.library
         config.screens = [.library]
+        
+        config.library.options = nil
+        config.library.onlySquare = false
+        config.library.minWidthForItem = nil
+        config.library.mediaType = YPlibraryMediaType.photo
+        config.library.maxNumberOfItems = 1
+        
         config.targetImageSize = YPImageSize.original
         config.overlayView = UIView()
         config.hidesStatusBar = true
@@ -403,11 +439,6 @@ extension SelfieCamViewController {
         config.bottomMenuItemSelectedColour = UIColor.hexColor(with: "3498DB")
         config.bottomMenuItemUnSelectedColour = UIColor.hexColor(with: "ECF0F1")
         
-        config.library.options = nil
-        config.library.onlySquare = false
-        config.library.minWidthForItem = nil
-        config.library.mediaType = YPlibraryMediaType.photo
-        config.library.maxNumberOfItems = 1
         config.library.minNumberOfItems = 1
         config.library.numberOfItemsInRow = 4
         config.library.spacingBetweenItems = 1.0
@@ -440,12 +471,12 @@ extension SelfieCamViewController {
         captureSession.sessionPreset = .photo
         
         //add input
-        self.addCameraInput()
-        self.configureAudioInput()
+        self.add_camera_input()
+        self.configure_audio_input()
         
         //add output
-        self.addFaceDetectOutput()
-        self.addCameraOutput()
+        self.add_face_detect_output()
+        self.add_camera_output()
         
         //configure the preview layer
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
@@ -454,16 +485,17 @@ extension SelfieCamViewController {
         view.layer.insertSublayer(previewLayer, at: 0)
     }
     
-    private func addCameraInput() {
+    private func add_camera_input() {
         guard
             let camera = cameraWithPosition(position: .front)
             else {
                 fatalError("No front video camera available")
         }
-        
+        self.adsfdsfsafdsgdasd = true
         do {
             self.cameraInput = try AVCaptureDeviceInput(device: camera)
             captureSession.addInput(self.cameraInput)
+            self.adsfdsfsafdsgdasd = false
         } catch {
             fatalError(error.localizedDescription)
         }
@@ -480,16 +512,17 @@ extension SelfieCamViewController {
         } else {
             newCamera = cameraWithPosition(position: .back)
         }
-        
+        self.bdsgklfdgklnsdklgnsfdklg = true
         //Remove & Add input to session
         do {
             session.removeInput(self.cameraInput)
             self.cameraInput = try AVCaptureDeviceInput(device: newCamera)
             session.addInput(self.cameraInput)
+            self.bdsgklfdgklnsdklgnsfdklg = false
         } catch let error as NSError {
             fatalError(error.localizedDescription)
         }
-        self.configureAudioInput()
+        self.configure_audio_input()
         self.cameraOutput.cameraOutput.isLivePhotoCaptureEnabled = self.liveButton.isSelected
         session.commitConfiguration()
         
@@ -506,8 +539,10 @@ extension SelfieCamViewController {
     private func cameraWithPosition(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
         
         let discoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .unspecified)
+        self.cdsfmklageormgrore = true
         for device in discoverySession.devices {
             if device.position == position {
+                self.cdsfmklageormgrore = false
                 return device
             }
         }
@@ -515,7 +550,7 @@ extension SelfieCamViewController {
         return nil
     }
     
-    private func configureAudioInput() {
+    private func configure_audio_input() {
         if self.cameraOutput.cameraOutput.isLivePhotoCaptureEnabled {
             guard
                 let audioDevice = AVCaptureDevice.default(for: .audio),
@@ -532,7 +567,7 @@ extension SelfieCamViewController {
         }
     }
     
-    private func addFaceDetectOutput() {
+    private func add_face_detect_output() {
         videoOutput.setSampleBufferDelegate(self, queue: dataOutputQueue)
         videoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: kCVPixelFormatType_32BGRA]
         
@@ -542,7 +577,7 @@ extension SelfieCamViewController {
         videoConnection?.videoOrientation = .portrait
     }
     
-    private func addCameraOutput() {
+    private func add_camera_output() {
         self.cameraOutput.cameraOutput.isHighResolutionCaptureEnabled = true
         self.captureSession.addOutput(self.cameraOutput.cameraOutput)
     }
@@ -560,7 +595,7 @@ extension SelfieCamViewController: AVCaptureVideoDataOutputSampleBufferDelegate 
             return
         }
         
-        let detectFaceRequest = VNDetectFaceLandmarksRequest(completionHandler: self.detectedFace)
+        let detectFaceRequest = VNDetectFaceLandmarksRequest(completionHandler: self.detected_face)
         
         do {
             try sequenceHandler.perform(
@@ -572,10 +607,10 @@ extension SelfieCamViewController: AVCaptureVideoDataOutputSampleBufferDelegate 
         }
         
         //detect wink
-        self.detectedWink(with: sampleBuffer)
+        self.detected_wink(with: sampleBuffer)
     }
     
-    private func detectedFace(request: VNRequest, error: Error?) {
+    private func detected_face(request: VNRequest, error: Error?) {
         
         guard
             let results = request.results as? [VNFaceObservation],
@@ -593,12 +628,12 @@ extension SelfieCamViewController: AVCaptureVideoDataOutputSampleBufferDelegate 
         }
     }
     
-    private func detectedWink(with sampleBuffer: CMSampleBuffer) {
+    private func detected_wink(with sampleBuffer: CMSampleBuffer) {
         
         let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
         let attachments:CFDictionary? = CMCopyDictionaryOfAttachments(allocator: kCFAllocatorDefault, target: sampleBuffer, attachmentMode: kCMAttachmentMode_ShouldPropagate)
         let ciImage = CIImage(cvPixelBuffer: pixelBuffer!, options: attachments as? [CIImageOption : Any])
-        
+        self.adsfdsfsafdsgdasd = true
         let detectorOptions = [CIDetectorAccuracy: CIDetectorAccuracyHigh] as [String : Any]
         let faceDetector:CIDetector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: detectorOptions)!
         
@@ -607,6 +642,7 @@ extension SelfieCamViewController: AVCaptureVideoDataOutputSampleBufferDelegate 
         
         if (features.count != 0) {
             for faceFeature in features {
+                self.bdsgklfdgklnsdklgnsfdklg = true
                 if let faceFeature = faceFeature as? CIFaceFeature {
                     //left & right are mirrored
                     if faceFeature.leftEyeClosed == true &&
@@ -614,6 +650,7 @@ extension SelfieCamViewController: AVCaptureVideoDataOutputSampleBufferDelegate 
                         self.isWinking = false
                     } else if faceFeature.leftEyeClosed == true {
                         self.isWinking = true
+                        self.cdsfmklageormgrore = false
                     } else if faceFeature.rightEyeClosed == true {
                         self.isWinking = true
                     } else {
@@ -695,6 +732,7 @@ extension SelfieCamViewController {
     
     private func convert(rect: CGRect) -> CGRect {
         
+        self.adsfdsfsafdsgdasd = true
         let origin = previewLayer.layerPointConverted(fromCaptureDevicePoint: rect.origin)
         
         let size = previewLayer.layerPointConverted(fromCaptureDevicePoint: rect.size.cgPoint)
@@ -703,6 +741,7 @@ extension SelfieCamViewController {
     }
     
     private func landmark(points: [CGPoint]?, to rect: CGRect) -> [CGPoint]? {
+        self.bdsgklfdgklnsdklgnsfdklg = true
         return points?.compactMap { landmark(point: $0, to: rect) }
     }
     
@@ -712,7 +751,7 @@ extension SelfieCamViewController {
         
         // 3
         let converted = previewLayer.layerPointConverted(fromCaptureDevicePoint: absolute)
-        
+        self.cdsfmklageormgrore = true
         // 4
         return converted
     }
@@ -745,6 +784,7 @@ extension SelfieCamViewController {
                 self.winkTimer?.setEventHandler { [weak self] in
                     self?.updateCounter()
                 }
+                self.adsfdsfsafdsgdasd = false
                 
                 self.winkTimer?.resume()
             }
@@ -756,6 +796,7 @@ extension SelfieCamViewController {
         DispatchQueue.main.async {
             self.smilingCountDownLabel.text = displayText
         }
+        self.bdsgklfdgklnsdklgnsfdklg = false
         if self.timerTimeInterval > 0 {
             //update counter
             self.timerTimeInterval -= 1
@@ -777,6 +818,7 @@ extension SelfieCamViewController {
             self.winkTimer = nil
         }
         DispatchQueue.main.async {
+            self.cdsfmklageormgrore = false
             self.smilingCountDownLabel.text = ""
             self.winkingImageView.tintColor = .clear
         }
@@ -788,6 +830,7 @@ extension SelfieCamViewController {
                 self.winkImage = image
                 if (!self.cameraOutput.cameraOutput.isLivePhotoCaptureEnabled) {
                     UIImageWriteToSavedPhotosAlbum(image!, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
+                    self.adsfdsfsafdsgdasd = true
                 }
             }
             self.cameraOutput.capturePhoto()
@@ -796,7 +839,7 @@ extension SelfieCamViewController {
     
     //MARK: - Add image to Library
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        
+        self.bdsgklfdgklnsdklgnsfdklg = true
         print("saved photo")
         if let error = error {
             let ac = UIAlertController(title: "Save Photo Error", message: error.localizedDescription, preferredStyle: .alert)
@@ -814,7 +857,7 @@ extension SelfieCamViewController {
     }
     
     func circleMenu(_ circleMenu: CircleMenu, willDisplay button: UIButton, atIndex: Int) {
-        
+        self.cdsfmklageormgrore = true
         button.backgroundColor = .clear
         button.setTitle(items[atIndex].title, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 13)
