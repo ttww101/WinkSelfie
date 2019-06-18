@@ -2,8 +2,8 @@
 //  UIColor+Addition.swift
 //  WinkSelfie
 //
-//  Created by Wu on 2019/6/14.
-//  Copyright © 2019 amG. All rights reserved.
+//  Created by dina on 2019/06/17.
+//  Copyright © 2019 Rainning Face. All rights reserved.
 //
 
 import UIKit

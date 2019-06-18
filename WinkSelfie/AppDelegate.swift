@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  WinkSelfie
 //
-//  Created by Wu on 2019/6/14.
-//  Copyright © 2019 amG. All rights reserved.
+//  Created by mary on 2019/06/16.
+//  Copyright © 2019 Rainning Face. All rights reserved.
 //
 
 import UIKit

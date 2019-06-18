@@ -2,8 +2,8 @@
 //  live.swift
 //  WinkSelfie
 //
-//  Created by Wu on 2019/6/14.
-//  Copyright © 2019 amG. All rights reserved.
+//  Created by luke on 2019/06/13.
+//  Copyright © 2019 Rainning Face. All rights reserved.
 //
 
 import AVFoundation

@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icons8-wink-50-3.png",
+      "filename" : "icons8-wink-64.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icons8-wink-100-3.png",
+      "filename" : "icons8-wink-96.png",
       "scale" : "2x"
     },
     {

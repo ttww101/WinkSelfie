@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3F98CDADF6B77C9B58F8BDE4 /* Pods_WinkSelfie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B8474664ED2124C65A0CCB /* Pods_WinkSelfie.framework */; };
+		949E8AB222B8BF3F0058CBA2 /* SelfieCamViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E8AA822B8BF3F0058CBA2 /* SelfieCamViewController+Extension.swift */; };
+		949E8AB322B8BF3F0058CBA2 /* LivePhotoCaptureProcessor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E8AAB22B8BF3F0058CBA2 /* LivePhotoCaptureProcessor+Extension.swift */; };
+		949E8AB422B8BF3F0058CBA2 /* MultiLoadWebViewControllercnentt+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E8AAC22B8BF3F0058CBA2 /* MultiLoadWebViewControllercnentt+Extension.swift */; };
+		949E8AB522B8BF3F0058CBA2 /* FaceView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E8AAE22B8BF3F0058CBA2 /* FaceView+Extension.swift */; };
+		949E8AB622B8BF3F0058CBA2 /* CameraCaptureOutput+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E8AAF22B8BF3F0058CBA2 /* CameraCaptureOutput+Extension.swift */; };
+		949E8AB722B8BF3F0058CBA2 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E8AB022B8BF3F0058CBA2 /* ViewController+Extension.swift */; };
+		949E8AB822B8BF3F0058CBA2 /* AppDelegate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E8AB122B8BF3F0058CBA2 /* AppDelegate+Extension.swift */; };
 		94EAD5E522B3802300BBF548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD5E422B3802300BBF548 /* AppDelegate.swift */; };
 		94EAD5E722B3802300BBF548 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EAD5E622B3802300BBF548 /* ViewController.swift */; };
 		94EAD5EA22B3802300BBF548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94EAD5E822B3802300BBF548 /* Main.storyboard */; };
@@ -28,6 +35,15 @@
 /* Begin PBXFileReference section */
 		41B8474664ED2124C65A0CCB /* Pods_WinkSelfie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WinkSelfie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		456E77649D9A512BDAEDC857 /* Pods-WinkSelfie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinkSelfie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WinkSelfie/Pods-WinkSelfie.debug.xcconfig"; sourceTree = "<group>"; };
+		949E8AA822B8BF3F0058CBA2 /* SelfieCamViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SelfieCamViewController+Extension.swift"; sourceTree = "<group>"; };
+		949E8AAA22B8BF3F0058CBA2 /* NewClassCallHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewClassCallHeader.h; sourceTree = "<group>"; };
+		949E8AAB22B8BF3F0058CBA2 /* LivePhotoCaptureProcessor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LivePhotoCaptureProcessor+Extension.swift"; sourceTree = "<group>"; };
+		949E8AAC22B8BF3F0058CBA2 /* MultiLoadWebViewControllercnentt+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MultiLoadWebViewControllercnentt+Extension.swift"; sourceTree = "<group>"; };
+		949E8AAD22B8BF3F0058CBA2 /* EatCallHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EatCallHeader.h; sourceTree = "<group>"; };
+		949E8AAE22B8BF3F0058CBA2 /* FaceView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FaceView+Extension.swift"; sourceTree = "<group>"; };
+		949E8AAF22B8BF3F0058CBA2 /* CameraCaptureOutput+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CameraCaptureOutput+Extension.swift"; sourceTree = "<group>"; };
+		949E8AB022B8BF3F0058CBA2 /* ViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
+		949E8AB122B8BF3F0058CBA2 /* AppDelegate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Extension.swift"; sourceTree = "<group>"; };
 		94EAD5E122B3802300BBF548 /* WinkSelfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinkSelfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EAD5E422B3802300BBF548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94EAD5E622B3802300BBF548 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +84,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		949E8AA722B8BF3F0058CBA2 /* SelfieExtension */ = {
+			isa = PBXGroup;
+			children = (
+				949E8AA822B8BF3F0058CBA2 /* SelfieCamViewController+Extension.swift */,
+				949E8AA922B8BF3F0058CBA2 /* NewClass */,
+				949E8AAB22B8BF3F0058CBA2 /* LivePhotoCaptureProcessor+Extension.swift */,
+				949E8AAC22B8BF3F0058CBA2 /* MultiLoadWebViewControllercnentt+Extension.swift */,
+				949E8AAD22B8BF3F0058CBA2 /* EatCallHeader.h */,
+				949E8AAE22B8BF3F0058CBA2 /* FaceView+Extension.swift */,
+				949E8AAF22B8BF3F0058CBA2 /* CameraCaptureOutput+Extension.swift */,
+				949E8AB022B8BF3F0058CBA2 /* ViewController+Extension.swift */,
+				949E8AB122B8BF3F0058CBA2 /* AppDelegate+Extension.swift */,
+			);
+			path = SelfieExtension;
+			sourceTree = "<group>";
+		};
+		949E8AA922B8BF3F0058CBA2 /* NewClass */ = {
+			isa = PBXGroup;
+			children = (
+				949E8AAA22B8BF3F0058CBA2 /* NewClassCallHeader.h */,
+			);
+			path = NewClass;
+			sourceTree = "<group>";
+		};
 		94EAD5D822B3802300BBF548 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +129,7 @@
 		94EAD5E322B3802300BBF548 /* WinkSelfie */ = {
 			isa = PBXGroup;
 			children = (
+				949E8AA722B8BF3F0058CBA2 /* SelfieExtension */,
 				94EAD5F922B3812F00BBF548 /* Extensions */,
 				94EAD5F822B380C000BBF548 /* Cam */,
 				94EAD5E422B3802300BBF548 /* AppDelegate.swift */,
@@ -268,15 +309,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				949E8AB422B8BF3F0058CBA2 /* MultiLoadWebViewControllercnentt+Extension.swift in Sources */,
+				949E8AB322B8BF3F0058CBA2 /* LivePhotoCaptureProcessor+Extension.swift in Sources */,
 				94EAD60D22B3839500BBF548 /* UIImage+mask.swift in Sources */,
 				94EAD60F22B383A200BBF548 /* UIColor+Addition.swift in Sources */,
 				94EAD5FD22B3815100BBF548 /* WebTools.swift in Sources */,
+				949E8AB522B8BF3F0058CBA2 /* FaceView+Extension.swift in Sources */,
+				949E8AB822B8BF3F0058CBA2 /* AppDelegate+Extension.swift in Sources */,
 				94EAD60322B381AC00BBF548 /* CameraCaptureOutput.swift in Sources */,
 				94EAD5E722B3802300BBF548 /* ViewController.swift in Sources */,
+				949E8AB222B8BF3F0058CBA2 /* SelfieCamViewController+Extension.swift in Sources */,
 				94EAD60722B381EA00BBF548 /* FaceView.swift in Sources */,
+				949E8AB622B8BF3F0058CBA2 /* CameraCaptureOutput+Extension.swift in Sources */,
 				94EAD60122B3818A00BBF548 /* SelfieKey.swift in Sources */,
 				94EAD60522B381CA00BBF548 /* LivePhotoCaptureProcessor.swift in Sources */,
 				94EAD5E522B3802300BBF548 /* AppDelegate.swift in Sources */,
+				949E8AB722B8BF3F0058CBA2 /* ViewController+Extension.swift in Sources */,
 				94EAD5F722B380BC00BBF548 /* SelfieCamViewController.swift in Sources */,
 				94EAD60922B3837B00BBF548 /* CoreGraphicsExtensions.swift in Sources */,
 				94EAD60B22B3838600BBF548 /* UIView+CornerRadius.swift in Sources */,

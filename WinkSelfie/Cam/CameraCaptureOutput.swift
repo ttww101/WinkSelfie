@@ -2,8 +2,8 @@
 //  came.swift
 //  WinkSelfie
 //
-//  Created by Wu on 2019/6/14.
-//  Copyright © 2019 amG. All rights reserved.
+//  Created by luke on 2019/06/13.
+//  Copyright © 2019 Rainning Face. All rights reserved.
 //
 
 import UIKit
@@ -56,10 +56,10 @@ class CameraCaptureOutput: NSObject, AVCapturePhotoCaptureDelegate {
     func captureLivePhoto() {
         //live photo path change
         var livePhotoCount = 0
-        if let count = UserDefaults.standard.value(forKey: SmileSelfieKey.livePhotoCount) as? Int {
+        if let count = UserDefaults.standard.value(forKey: SelfieKey.livePhotoCount) as? Int {
             livePhotoCount = count + 1
         }
-        UserDefaults.standard.setValue(livePhotoCount, forKey: SmileSelfieKey.livePhotoCount)
+        UserDefaults.standard.setValue(livePhotoCount, forKey: SelfieKey.livePhotoCount)
         
         let photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.hevc])
         self.cameraOutput.isHighResolutionCaptureEnabled = true
@@ -72,7 +72,7 @@ class CameraCaptureOutput: NSObject, AVCapturePhotoCaptureDelegate {
                 }
             }
         }
-        photoSettings.livePhotoMovieFileURL = URL(fileURLWithPath:  NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]+"/smile_selfie_live_photo_\(livePhotoCount).mov")
+        photoSettings.livePhotoMovieFileURL = URL(fileURLWithPath:  NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]+"/wink_selfie_live_photo_\(livePhotoCount).mov")
         
         let captureProcessor = LivePhotoCaptureProcessor()
         captureProcessor.livePhotoStatusHandler = { isCapturing in
