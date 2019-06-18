@@ -2,7 +2,7 @@
 //  FlashState.swift
 //  WinkSelfie
 //
-//  Created by Wu on 2019/6/18.
+//  Created by bryan on 2019/06/17.
 //  Copyright © 2019 amG. All rights reserved.
 //
 

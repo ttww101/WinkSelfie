@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  WinkSelfie
+
+  Created by Wu on 2019/6/18.
+  Copyright © 2019 amG. All rights reserved.
+*/
+
+"welcome" = "Welcome to Wink Selfie!";
+"manual/auto_1" = "This is a manual/auto button.";
+"manual/auto_2" = "Which detect & capture if your wink!";
+"flash_light" = "Control Flash Light.";
+"mode" = "Normal/Outline mode for u.";
+"live_photo_1" = "Take a live photo.";
+"live_photo_2" = "Make ur wink face lively.";
+"gallery" = "This is gallery contains kinds filter.";
+"camera_change_1" = "Change ur camera.";
+"camera_change_2" = "If u need.";
+"manual_shot" = "U can also take a photo by ur own.";
+"selfie_guide" = "Start Using Wink Selfie!";

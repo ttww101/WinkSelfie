@@ -1,0 +1,14 @@
+/* 
+  InfoPlist.strings
+  WinkSelfie
+
+  Created by Wu on 2019/6/18.
+  Copyright © 2019 amG. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "WinkSelfie";
+"CFBundleName" = "WinkSelfie";
+"NSCameraUsageDescription" = "Let Smile Selfie use ur camera to grab pictures & start.";
+"NSPhotoLibraryAddUsageDescription" = "Let Smile Selfie save ur wink photos for u.";
+"NSPhotoLibraryUsageDescription" = "Let Smile Selfie use ur photo library to make photo more beautiful with filters.";
+"NSMicrophoneUsageDescription" = "Let Smile Selfie use microphone to save live photo.";

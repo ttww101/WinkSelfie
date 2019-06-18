@@ -1,0 +1,13 @@
+/*
+ InfoPlist.strings
+ WinkSelfie
+ 
+ Created by Wu on 2019/6/18.
+ Copyright © 2019 amG. All rights reserved.
+ */
+"CFBundleDisplayName" = "眨眼自拍";
+"CFBundleName" = "眨眼自拍";
+"NSCameraUsageDescription" = "让眨眼自拍取得您的相机开始体验";
+"NSPhotoLibraryAddUsageDescription" = "让眨眼自拍将照片加入您的图库";
+"NSPhotoLibraryUsageDescription" = "让眨眼自拍取得您的图库加入滤镜效果！";
+"NSMicrophoneUsageDescription" = "让眨眼自拍取得麦克风拍出生动 Live Photo！";

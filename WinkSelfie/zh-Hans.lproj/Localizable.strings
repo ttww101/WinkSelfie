@@ -1,0 +1,20 @@
+/*
+ Localizable.strings
+ WinkSelfie
+ 
+ Created by Wu on 2019/6/18.
+ Copyright © 2019 amG. All rights reserved.
+ */
+
+"welcome" = "欢迎使用 Wink Selfie!";
+"manual/auto_1" = "这是手动/自动按钮，";
+"manual/auto_2" = "用来设定手动/自动拍照模式";
+"flash_light" = "此按钮用来控制闪光灯";
+"mode" = "提供 Normal/Outline 模式给您使用";
+"live_photo_1" = "设定 Live Photo 模式";
+"live_photo_2" = "让您的照片看起来更加生动";
+"gallery" = "这是拥有设定滤镜的照片图库";
+"camera_change_1" = "更改您的镜头方向，";
+"camera_change_2" = "如果您需要";
+"manual_shot" = "您也可以自己使用手动拍照";
+"selfie_guide" = "Wink Selfie 导览";

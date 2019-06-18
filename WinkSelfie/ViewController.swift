@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  WinkSelfie
 //
-//  Created by mary on 2019/06/16.
+//  Created by curry on 2019/06/16.
 //  Copyright © 2019 Rainning Face. All rights reserved.
 //
 

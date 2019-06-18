@@ -2,7 +2,7 @@
 //  UIColor+Addition.swift
 //  WinkSelfie
 //
-//  Created by dina on 2019/06/17.
+//  Created by wang on 2019/06/07.
 //  Copyright © 2019 Rainning Face. All rights reserved.
 //
 

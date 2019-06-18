@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Live"; ObjectID = "eRK-qO-w4E"; */
+"eRK-qO-w4E.normalTitle" = "Live";
+
+/* Class = "UIButton"; selectedTitle = "Auto"; ObjectID = "mQ2-v8-gcy"; */
+"mQ2-v8-gcy.selectedTitle" = "Auto";
+
+/* Class = "UIButton"; normalTitle = "Normal"; ObjectID = "wJ8-sl-hxI"; */
+"wJ8-sl-hxI.normalTitle" = "Normal";
+
+/* Class = "UIButton"; selectedTitle = "Outline"; ObjectID = "wJ8-sl-hxI"; */
+"wJ8-sl-hxI.selectedTitle" = "Outline";
+
+/* Class = "UILabel"; text = " 3"; ObjectID = "zCQ-lh-ltC"; */
+"zCQ-lh-ltC.text" = " 3";

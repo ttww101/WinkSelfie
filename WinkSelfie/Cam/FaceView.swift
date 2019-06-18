@@ -2,7 +2,7 @@
 //  FaceView.swift
 //  WinkSelfie
 //
-//  Created by luke on 2019/06/13.
+//  Created by bryan on 2019/06/17.
 //  Copyright © 2019 Rainning Face. All rights reserved.
 //
 

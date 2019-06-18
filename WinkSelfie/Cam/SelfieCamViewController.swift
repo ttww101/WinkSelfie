@@ -2,7 +2,7 @@
 //  SelfieCamViewController.swift
 //  WinkSelfie
 //
-//  Created by luke on 2019/06/13.
+//  Created by bryan on 2019/06/17.
 //  Copyright © 2019 Rainning Face. All rights reserved.
 //
 
@@ -189,7 +189,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
             _ = mask?.trailing.equalTo()(self.view)?.offset()(-16)
         })
         self.adsfdsfsafdsgdasd = false
-        self.firstGuideLabel.text = "Wink Selfie Guide"
+        self.firstGuideLabel.text = NSLocalizedString("selfie_guide", comment: "")
         self.firstGuideLabel.startAnimation(duration: 2, nil)
         
         self.guideViewArr.append(self.firstGuideLabel)
@@ -264,7 +264,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
                 _ = mask?.leading.equalTo()(self.view)?.offset()(16)
                 _ = mask?.trailing.equalTo()(self.view)?.offset()(-16)
             })
-            startLabel.text = "Welcome to Wink Selfie!"
+            startLabel.text = NSLocalizedString("welcome", comment: "")
             startLabel.startAnimation(duration: 2, {
                 UIView.animate(withDuration: 1.5, animations: {
                     startLabel.alpha = 0
@@ -288,16 +288,16 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
             print("did nav")
             if (index == 1) {
                 guideView.isUserInteractionEnabled = false
-                self.dwAnimatedLabel_1.text = "This is a manual/auto button."
+                self.dwAnimatedLabel_1.text = NSLocalizedString("manual/auto_1", comment: "")
                 self.dwAnimatedLabel_1.startAnimation(duration: 3, {
-                    self.dwAnimatedLabel_2.text = "Which detect & capture if your wink!"
+                    self.dwAnimatedLabel_2.text = NSLocalizedString("manual/auto_2", comment: "")
                     self.dwAnimatedLabel_2.startAnimation(duration: 3, {
                         guideView.isUserInteractionEnabled = true
                     })
                 })
             } else if (index == 2) {
                 guideView.isUserInteractionEnabled = false
-                self.dwAnimatedLabel_1.text = "Control Flash Light."
+                self.dwAnimatedLabel_1.text = NSLocalizedString("flash_light", comment: "")
                 self.dwAnimatedLabel_1.startAnimation(duration: 2.5, {
                     guideView.isUserInteractionEnabled = true
                 })
@@ -309,22 +309,22 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
                 self.dwAnimatedLabel_2.startAnimation(duration: 0.1, nil)
             } else if (index == 3) {
                 guideView.isUserInteractionEnabled = false
-                self.dwAnimatedLabel_1.text = "Normal/Outline mode for u."
+                self.dwAnimatedLabel_1.text = NSLocalizedString("mode", comment: "")
                 self.dwAnimatedLabel_1.startAnimation(duration: 2.5, {
                     guideView.isUserInteractionEnabled = true
                 })
             } else if (index == 4) {
                 guideView.isUserInteractionEnabled = false
-                self.dwAnimatedLabel_1.text = "Take a live photo."
+                self.dwAnimatedLabel_1.text = NSLocalizedString("live_photo_1", comment: "")
                 self.dwAnimatedLabel_1.startAnimation(duration: 2.5, {
-                    self.dwAnimatedLabel_2.text = "Make ur wink face lively."
+                    self.dwAnimatedLabel_2.text = NSLocalizedString("live_photo_2", comment: "")
                     self.dwAnimatedLabel_2.startAnimation(duration: 2.5, {
                         guideView.isUserInteractionEnabled = true
                     })
                 })
             } else if (index == 5) {
                 guideView.isUserInteractionEnabled = false
-                self.dwAnimatedLabel_1.text = "This is gallery contains kinds filter."
+                self.dwAnimatedLabel_1.text = NSLocalizedString("gallery", comment: "")
                 self.dwAnimatedLabel_1.startAnimation(duration: 3, {
                     guideView.isUserInteractionEnabled = true
                 })
@@ -336,18 +336,18 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
                 self.dwAnimatedLabel_2.startAnimation(duration: 0.1, nil)
             } else if (index == 6) {
                 guideView.isUserInteractionEnabled = false
-                self.dwAnimatedLabel_1.text = "Change ur camera."
+                self.dwAnimatedLabel_1.text = NSLocalizedString("camera_change_1", comment: "")
                 self.dwAnimatedLabel_2.text = " "
                 self.dwAnimatedLabel_2.startAnimation(duration: 0.1, nil)
                 self.dwAnimatedLabel_1.startAnimation(duration: 2, {
-                    self.dwAnimatedLabel_2.text = "If u need."
+                    self.dwAnimatedLabel_2.text = NSLocalizedString("camera_change_2", comment: "")
                     self.dwAnimatedLabel_2.startAnimation(duration: 2, {
                         guideView.isUserInteractionEnabled = true
                     })
                 })
             } else if (index == 7) {
                 guideView.isUserInteractionEnabled = false
-                self.dwAnimatedLabel_1.text = "U can also take a photo by ur own."
+                self.dwAnimatedLabel_1.text = NSLocalizedString("manual_shot", comment: "")
                 self.dwAnimatedLabel_1.startAnimation(duration: 3.5, {
                     guideView.isUserInteractionEnabled = true
                 })
