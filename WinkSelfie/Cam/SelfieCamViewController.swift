@@ -36,7 +36,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
     var sequenceHandler = VNSequenceRequestHandler()
     var previewLayer: AVCaptureVideoPreviewLayer!
     let dataOutputQueue = DispatchQueue(
-        label: "video data queue",
+        label: "wink video data queue",
         qos: .userInitiated,
         attributes: [],
         autoreleaseFrequency: .workItem)
@@ -56,7 +56,21 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
         }
     }
     var isWinking: Bool = false {
-        didSet {
+        didSet(oldValue) {
+            if (self.winkStatusChangeTimer != nil) {
+                isWinking = oldValue
+                return
+            } else {
+                self.winkStatusChangeTimer = DispatchSource.makeTimerSource()
+                
+                self.winkStatusChangeTimer?.schedule(deadline: .now()+0.35)
+                
+                self.winkStatusChangeTimer?.setEventHandler { [weak self] in
+                    self?.winkStatusChangeTimer = nil
+                }
+                
+                self.winkStatusChangeTimer?.resume()
+            }
             self.configAutoSavingPhoto(with: isWinking)
             if isWinking {
                 DispatchQueue.main.async {
@@ -71,8 +85,9 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
     }
     var isAutoSavingPhoto: Bool = false
     var winkTimeInterval: Int = 66666
-    var timer: DispatchSourceTimer? = nil
+    var winkTimer: DispatchSourceTimer? = nil
     var timerTimeInterval: Int = 66666
+    var winkStatusChangeTimer: DispatchSourceTimer? = nil
     
     //button control feature
     var isFlash: Bool = false
@@ -707,8 +722,9 @@ extension SelfieCamViewController {
 //camera method
 extension SelfieCamViewController {
     
-    private func configAutoSavingPhoto(with isSmiling: Bool) {
-        if !isAuto || !isSmiling {
+    private func configAutoSavingPhoto(with isWinking: Bool) {
+        
+        if !isAuto || !isWinking {
             self.cancelWinkTimer()
             return
         }
@@ -716,21 +732,21 @@ extension SelfieCamViewController {
         //auto saving
         if (self.isAutoSavingPhoto == false) {
             //TODO: cancel when changing to manual
-            if (self.timer == nil) {
+            if (self.winkTimer == nil) {
                 
                 self.isAutoSavingPhoto = true
                 
                 self.timerTimeInterval = self.winkTimeInterval
                 
-                self.timer = DispatchSource.makeTimerSource()
+                self.winkTimer = DispatchSource.makeTimerSource()
                 
-                self.timer?.schedule(deadline: .now(), repeating: .seconds(1))
+                self.winkTimer?.schedule(deadline: .now(), repeating: .seconds(1))
                 
-                self.timer?.setEventHandler { [weak self] in
+                self.winkTimer?.setEventHandler { [weak self] in
                     self?.updateCounter()
                 }
                 
-                self.timer?.resume()
+                self.winkTimer?.resume()
             }
         }
     }
@@ -756,9 +772,9 @@ extension SelfieCamViewController {
     
     private func cancelWinkTimer() {
         self.isAutoSavingPhoto = false
-        if let timer = self.timer {
+        if let timer = self.winkTimer {
             timer.cancel()
-            self.timer = nil
+            self.winkTimer = nil
         }
         DispatchQueue.main.async {
             self.smilingCountDownLabel.text = ""
