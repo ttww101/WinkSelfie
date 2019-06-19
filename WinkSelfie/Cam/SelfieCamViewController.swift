@@ -32,7 +32,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
     @IBOutlet weak var timeIntervalCircleMenuButton: CircleMenu!
     @IBOutlet weak var winkingImageView: UIImageView!
     var cdsfmklageormgrore = false
-    @IBOutlet weak var smilingCountDownLabel: UILabel!
+    @IBOutlet weak var winkingCountDownLabel: UILabel!
     
     //capture session
     let captureSession = AVCaptureSession()
@@ -167,7 +167,7 @@ class SelfieCamViewController: UIViewController, CircleMenuDelegate {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
         self.winkingImageView.tintColor = .clear
-        self.smilingCountDownLabel.text = ""
+        self.winkingCountDownLabel.text = ""
         
         self.coachMarksView = self.createGuideView()
     }
@@ -824,7 +824,7 @@ extension SelfieCamViewController {
     @objc func updateCounter() {
         let displayText = " \(self.timerTimeInterval/1)"
         DispatchQueue.main.async {
-            self.smilingCountDownLabel.text = displayText
+            self.winkingCountDownLabel.text = displayText
         }
         self.bdsgklfdgklnsdklgnsfdklg = false
         if self.timerTimeInterval > 0 {
@@ -849,7 +849,7 @@ extension SelfieCamViewController {
         }
         DispatchQueue.main.async {
             self.cdsfmklageormgrore = false
-            self.smilingCountDownLabel.text = ""
+            self.winkingCountDownLabel.text = ""
             self.winkingImageView.tintColor = .clear
         }
     }

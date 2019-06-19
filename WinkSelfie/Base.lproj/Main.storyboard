@@ -193,8 +193,8 @@
                         <outlet property="liveButton" destination="eRK-qO-w4E" id="N33-P1-e13"/>
                         <outlet property="manualShotButton" destination="Owy-iF-PJ0" id="n9f-ku-IJE"/>
                         <outlet property="modeButton" destination="wJ8-sl-hxI" id="GTz-19-u8g"/>
-                        <outlet property="smilingCountDownLabel" destination="zCQ-lh-ltC" id="Lad-46-9R3"/>
                         <outlet property="timeIntervalCircleMenuButton" destination="mQ2-v8-gcy" id="QBn-w7-atu"/>
+                        <outlet property="winkingCountDownLabel" destination="zCQ-lh-ltC" id="JDh-KS-Y0q"/>
                         <outlet property="winkingImageView" destination="fYc-nY-Dhn" id="47Z-9B-2f6"/>
                     </connections>
                 </viewController>
@@ -205,11 +205,11 @@
     <resources>
         <image name="cam_change" width="48" height="48"/>
         <image name="collection" width="50" height="50"/>
-        <image name="flash_off" width="50" height="50"/>
-        <image name="flash_on" width="50" height="50"/>
+        <image name="flash_off" width="40" height="40"/>
+        <image name="flash_on" width="40" height="40"/>
         <image name="manual" width="40" height="40"/>
         <image name="manual_shot" width="80" height="80"/>
         <image name="nil" width="16" height="16"/>
-        <image name="wink_face" width="50" height="50"/>
+        <image name="wink_face" width="48" height="48"/>
     </resources>
 </document>
