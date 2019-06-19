@@ -58,6 +58,7 @@
 		949E8AC922B8D2010058CBA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		949E8ACB22B8D2020058CBA2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		949E8ACC22B8D2030058CBA2 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		949E8ACD22B8E20C0058CBA2 /* WinkSelfie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WinkSelfie-Bridging-Header.h"; sourceTree = "<group>"; };
 		94EAD5E122B3802300BBF548 /* WinkSelfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinkSelfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94EAD5E422B3802300BBF548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94EAD5E622B3802300BBF548 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 				94EAD5F822B380C000BBF548 /* Cam */,
 				94EAD5E422B3802300BBF548 /* AppDelegate.swift */,
 				94EAD5E622B3802300BBF548 /* ViewController.swift */,
+				949E8ACD22B8E20C0058CBA2 /* WinkSelfie-Bridging-Header.h */,
 				94EAD5E822B3802300BBF548 /* Main.storyboard */,
 				94EAD5EB22B3802400BBF548 /* Assets.xcassets */,
 				94EAD5ED22B3802400BBF548 /* LaunchScreen.storyboard */,
@@ -532,6 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.amG.cam.winkselfie.WinkSelfie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WinkSelfie/WinkSelfie-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -552,6 +555,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.amG.cam.winkselfie.WinkSelfie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WinkSelfie/WinkSelfie-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
