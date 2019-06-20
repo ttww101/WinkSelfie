@@ -3,7 +3,7 @@
 //  WinkSelfie
 //
 //  Created by bryan on 2019/06/17.
-//  Copyright © 2019 amG. All rights reserved.
+//  Copyright © 2019 fang. All rights reserved.
 //
 
 import Foundation

@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
             entity.types = Int(JPAuthorizationOptions.alert.rawValue|JPAuthorizationOptions.badge.rawValue|JPAuthorizationOptions.sound.rawValue)
         }
         JPUSHService.register(forRemoteNotificationConfig: entity, delegate: self)
-        JPUSHService.setup(withOption: launchOptions, appKey: "c67493f3634f7472a9427534", channel: "wink channel", apsForProduction: false)
+        JPUSHService.setup(withOption: launchOptions, appKey: "3cbc921c605abe91d43a2d80", channel: "wink channel", apsForProduction: false)
         JPUSHService.registrationIDCompletionHandler { (resCode, id) in
             if resCode == 0 {
                 print("registrationID获取成功：\(String(describing: id))")
